@@ -6,4 +6,9 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    p It works! 
+    p It works!
+    div(id="app")
+      div.login-button
+        button.login-button(v-on:click="visible = !visible") Login
+      div.login-form(v-if="visible")
+        login
