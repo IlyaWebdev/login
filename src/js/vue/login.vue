@@ -1,6 +1,7 @@
 <template lang="pug">
-  div(v-if="show").login-window-background
-    div.login-window
+  div.auth-mode
+    div(v-if="show" @click="close").login-window-background
+    form.login-window(v-if="show" action="" method="")
       div.login-window__content
         div.login-header
           div.login-exit
@@ -44,12 +45,9 @@ export default {
     left:0;
     top:0;
     background-color: rgba(black, 0.5);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   .login-window{
+    position: absolute;
     height: 600px;
     width: 600px;
     background-color: skyblue;
