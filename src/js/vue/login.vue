@@ -8,12 +8,14 @@
             button.exit-btn(@click="close") x
         div.login-body
           div.login-username
-            input.username
+            label(for="mail") E-mail:
+            input(type="email" id="mail" name="user_email")
           div.login-password
-            input.password
+            label(for="pass") Password: 
+            input(type="password" id="pass" name="password")
         div.login-footer
           div.entry
-            button.entry Entry
+            button(class="" type="") Entry
           div.registration
             button.registration Registration
 </template>
@@ -47,9 +49,15 @@ export default {
     background-color: rgba(black, 0.5);
   }
   .login-window{
-    position: absolute;
-    height: 600px;
-    width: 600px;
+    position: relative;
+    /* Center the form on the page */
+    margin: 0 auto;
+    width: 500px;
+    /* Form outline */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+
     background-color: skyblue;
   }
   .login-window__content{
